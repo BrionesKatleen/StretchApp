@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StretchApp", "StretchApp.csproj", "{BAF0D5D8-8D2E-2D9F-5D18-DE20D590C2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF0D5D8-8D2E-2D9F-5D18-DE20D590C2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF0D5D8-8D2E-2D9F-5D18-DE20D590C2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF0D5D8-8D2E-2D9F-5D18-DE20D590C2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF0D5D8-8D2E-2D9F-5D18-DE20D590C2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E9F63EA-0D68-4E4D-BB92-06B85A3E1A5D}
+	EndGlobalSection
+EndGlobal
