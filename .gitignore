@@ -1,5 +1,60 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# =========================
+# Visual Studio / .NET
+# =========================
 
-/.vs/StretchApp
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.dll
+*.exe
+*.pdb
+*.obj
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.vsp
+*.vsix
+*.nupkg
+*.snk
+
+# Build folders
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+x64/
+x86/
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.dll
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Code
+.vscode/
+
+# Rider IDE
+.idea/
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.log
+*.sdf
+*.mdf
+*.ldf
+
+# Stretch Desktop Application specific (if any config/temp folders)
+Temp/
