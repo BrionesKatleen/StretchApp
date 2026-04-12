@@ -8,4 +8,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\repositories\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.6.0" />
+  </ItemGroup>
+
 </Project>
