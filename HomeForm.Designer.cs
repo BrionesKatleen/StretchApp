@@ -136,6 +136,7 @@
             TimerButton.Size = new Size(49, 42);
             TimerButton.TabIndex = 2;
             TimerButton.UseVisualStyleBackColor = true;
+            TimerButton.Click += TimerButton_Click;
             // 
             // wrkLoadButton
             // 

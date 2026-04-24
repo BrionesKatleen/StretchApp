@@ -12,7 +12,7 @@ namespace StretchApp.src.controllers
         Running,
         Paused
     }
-    internal class SessionController
+    class SessionController
     {
         private readonly SessionService _sessionService;
         private readonly System.Windows.Forms.Timer _timer;

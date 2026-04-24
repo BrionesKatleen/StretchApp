@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0lOG/QAIAcc=",
+  "dgSpecHash": "DVyEM7gPGBk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\StretchApp.csproj",
+  "projectFilePath": "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\StretchApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KatleenBriones\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\KatleenBriones\\.nuget\\packages\\google.protobuf\\3.32.0\\google.protobuf.3.32.0.nupkg.sha512",
