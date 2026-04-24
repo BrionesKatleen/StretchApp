@@ -58,3 +58,4 @@ artifacts/
 
 # Stretch Desktop Application specific (if any config/temp folders)
 Temp/
+/.vs/StretchApp
