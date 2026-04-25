@@ -2,7 +2,7 @@ using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Task
+namespace StretchApp
 {
     public partial class Form1 : Form
     {
