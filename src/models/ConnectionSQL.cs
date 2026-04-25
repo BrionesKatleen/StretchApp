@@ -14,7 +14,7 @@ namespace StretchApp.src.models
     {
         // Connection string to connect to the MySQL database.
         // Note: Modify uid and password according to your local MySQL setup before running the application.
-        private readonly string _connectionString = "server=localhost;database=StretchDB;uid=root;password=password;";
+        private readonly string _connectionString = "server=localhost;database=stretchdb;uid=root;password=#Sweet16!;";
 
         //Creates and opens a MySQL connection.
         public MySqlConnection GetConnection()

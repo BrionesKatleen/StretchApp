@@ -26,8 +26,8 @@ namespace StretchApp.src.tests
                     MessageBox.Show("TEST FAILED: Connection is NOT OPEN");
                 }
 
-                conn.Close();
-                MessageBox.Show("Connection closed.");
+                //conn.Close();
+                //MessageBox.Show("Connection closed.");
             }
             catch (Exception ex)
             {
