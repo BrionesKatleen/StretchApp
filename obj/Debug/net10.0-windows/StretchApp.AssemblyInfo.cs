@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efab0c669125802b5ef238b93fd053b2575a2c33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64a3dc681c8a1b5392ea9e8bd9ef3886b027cd35")]
 [assembly: System.Reflection.AssemblyProductAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

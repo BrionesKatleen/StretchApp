@@ -1,6 +1,6 @@
 using System;
 
-namespace Pomodoro
+namespace StretchApp
 {
     public enum SessionType
     {

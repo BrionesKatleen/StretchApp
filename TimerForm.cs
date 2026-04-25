@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using System.ComponentModel;
 
 namespace StretchApp
 {
@@ -47,9 +48,6 @@ namespace StretchApp
 
         private NumericUpDown NudFocus;
         private NumericUpDown NudBreak;
-
-        private CircleButton ButtonMinus;
-        private CircleButton ButtonPlus;
 
         public TimerForm()
         {
@@ -147,8 +145,8 @@ namespace StretchApp
                 Font = new System.Drawing.Font("Segoe UI", 58f, FontStyle.Bold),
                 ForeColor = ColLight,
                 AutoSize = false,
-                Size = new Size(320, 80),
-                Location = new Point(150, 150),
+                Size = new Size(330, 80),
+                Location = new Point(600, 160),
                 TextAlign = ContentAlignment.MiddleCenter,
                 BackColor = Color.Transparent
             };
@@ -167,7 +165,7 @@ namespace StretchApp
 
             ButtonReset = new CircleButton
             {
-                Size = new Size(52, 52),
+                Size = new Size(55, 55),
                 Location = new Point(196, 340),
                 Symbol = "⟲",
                 BackColor = Color.FromArgb(245, 236, 227),
@@ -178,17 +176,17 @@ namespace StretchApp
             ButtonPlay = new CircleButton
             {
                 Size = new Size(72, 72),
-                Location = new Point(274, 330),
+                Location = new Point(280, 340),
                 Symbol = "▶",
                 BackColor = Color.FromArgb(255, 250, 245),
-                ForeColor = ColDark
+                ForeColor = ColDark 
             };
             ButtonPlay.Click += OnPlayPauseClick;
 
             ButtonSettings = new CircleButton
             {
-                Size = new Size(52, 52),
-                Location = new Point(372, 340),
+                Size = new Size(55, 55),
+                Location = new Point(385, 355),
                 Symbol = "⚙",
                 BackColor = Color.FromArgb(245, 236, 227),
                 ForeColor = ColDark
@@ -304,15 +302,19 @@ namespace StretchApp
 
             int TimeW = (int)(320 * Sx);
             int TimeH = (int)(80 * Sy);
-            int TimeY = CircleCy - TimeH / 2 - (int)(22 * Sy);
-            LabelTime.Size = new Size(TimeW, TimeH);
-            LabelTime.Location = new Point(Pcx - TimeW / 2, TimeY);
-            LabelTime.Font = ScaledFont("Segoe UI", 52f, S, 20f, FontStyle.Bold);
-
             int ModeW = (int)(320 * Sx);
             int ModeH = (int)(34 * Sy);
+            int TimerGap = (int)(5 * Sy);
+
+            int BlockH = TimeH + Gap + ModeH;
+            int BlockY = CircleCy - BlockH / 2;
+
+            LabelTime.Size = new Size(TimeW, TimeH);
+            LabelTime.Location = new Point(Pcx - TimeW / 2, BlockY);
+            LabelTime.Font = ScaledFont("Segoe UI", 52f, S, 20f, FontStyle.Bold);
+
             LabelMode.Size = new Size(ModeW, ModeH);
-            LabelMode.Location = new Point(Pcx - ModeW / 2, TimeY + TimeH + (int)(2 * Sy));
+            LabelMode.Location = new Point(Pcx - ModeW / 2, BlockY + TimeH + Gap);
             LabelMode.Font = ScaledFont("Segoe UI", 13f, S, 9f);
 
             int CircleBottom = CircleCy + R;
@@ -391,7 +393,7 @@ namespace StretchApp
             NudBreak = new NumericUpDown { Location = new Point(200, 86), Size = new Size(80, 28), Minimum = 1, Maximum = 60, Value = 5, Font = new System.Drawing.Font("Segoe UI", 11f) };
             NudBreak.ValueChanged += (S, E) => { _controller.SetBreakDuration((int)NudBreak.Value); RefreshStats(); };
 
-            var BtnApply = new RoundedButton { Text = "Apply & Close", Size = new Size(140, 34), Location = new Point(460, 62), BackColor = ColDark, ForeColor = ColLight, Font = new System.Drawing.Font("Segoe UI", 9f, FontStyle.Bold) };
+            var BtnApply = new RoundedButton { Text = "Apply", Size = new Size(100, 34), Location = new Point(420, 40), BackColor = ColDark, ForeColor = ColLight, Font = new System.Drawing.Font("Segoe UI", 9f, FontStyle.Bold) };
             BtnApply.Click += ToggleSettings;
 
             Pnl.Controls.AddRange(new Control[] { Lbl, LblF, NudFocus, LblB, NudBreak, BtnApply });
@@ -633,6 +635,7 @@ namespace StretchApp
 
     public class CircleButton : Button
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Symbol { get; set; } = "▶";
 
         public CircleButton()
@@ -674,7 +677,10 @@ namespace StretchApp
     }
     public class StatCard : Panel
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Label { get; set; }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Value { get; set; }
         private Color _bg, _fg, _sub;
 

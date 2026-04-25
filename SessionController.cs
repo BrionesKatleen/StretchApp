@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Pomodoro
+namespace StretchApp
 {
     public enum TimerState
     {
