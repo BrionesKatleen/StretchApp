@@ -1,0 +1,7 @@
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.Form1.resources
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.Properties.Resources.resources
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.csproj.GenerateResource.cache
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.AssemblyInfoInputs.cache
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.AssemblyInfo.cs
+C:\Users\vincent\source\repos\Dashboard\Dashboard\obj\Debug\net10.0-windows\Dashboard.csproj.CoreCompileInputs.cache
