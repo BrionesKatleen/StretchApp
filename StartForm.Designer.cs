@@ -39,7 +39,7 @@ partial class StartForm
         // 
         // panel1
         // 
-        panel1.BackColor = SystemColors.ButtonFace;
+        panel1.BackColor = Color.FromArgb(231, 213, 191);
         panel1.Controls.Add(button1);
         panel1.Controls.Add(label1);
         panel1.Controls.Add(pictureBox1);
@@ -50,14 +50,16 @@ partial class StartForm
         // 
         // button1
         // 
+        button1.BackColor = Color.FromArgb(99, 79, 75);
         button1.Font = new Font("Script MT Bold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        button1.ForeColor = Color.White;
         button1.Location = new Point(262, 580);
         button1.Name = "button1";
         button1.Size = new Size(119, 36);
         button1.TabIndex = 2;
         button1.Text = "Get started →";
-        button1.TextImageRelation = TextImageRelation.ImageAboveText;
-        button1.UseVisualStyleBackColor = true;
+        button1.TextImageRelation = TextImageRelation.TextAboveImage;
+        button1.UseVisualStyleBackColor = false;
         button1.Click += button1_Click;
         // 
         // label1
@@ -89,6 +91,7 @@ partial class StartForm
         // 
         AutoScaleDimensions = new SizeF(7F, 18F);
         AutoScaleMode = AutoScaleMode.Font;
+        BackColor = Color.FromArgb(231, 213, 191);
         ClientSize = new Size(682, 973);
         Controls.Add(panel1);
         Font = new Font("Pristina", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);

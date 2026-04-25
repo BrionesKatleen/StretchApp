@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             splitContainer1 = new SplitContainer();
             splitContainer2 = new SplitContainer();
+            label1 = new Label();
             Dashboard = new TabControl();
             Workload = new TabPage();
             ReadingLog = new TabPage();
@@ -38,7 +39,6 @@
             TimerButton = new Button();
             wrkLoadButton = new Button();
             HomeButton = new Button();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -86,8 +86,19 @@
             // 
             splitContainer2.Panel2.Controls.Add(Dashboard);
             splitContainer2.Size = new Size(682, 900);
-            splitContainer2.SplitterDistance = 205;
+            splitContainer2.SplitterDistance = 204;
             splitContainer2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Rockwell Condensed", 30F);
+            label1.Location = new Point(269, 87);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 59);
+            label1.TabIndex = 0;
+            label1.Text = "Timer";
             // 
             // Dashboard
             // 
@@ -101,23 +112,23 @@
             // 
             // Workload
             // 
+            Workload.BackColor = Color.FromArgb(102, 63, 64);
             Workload.Location = new Point(4, 29);
             Workload.Name = "Workload";
             Workload.Padding = new Padding(3);
             Workload.Size = new Size(650, 575);
             Workload.TabIndex = 0;
             Workload.Text = "Workload";
-            Workload.UseVisualStyleBackColor = true;
             // 
             // ReadingLog
             // 
+            ReadingLog.BackColor = Color.FromArgb(102, 63, 64);
             ReadingLog.Location = new Point(4, 29);
             ReadingLog.Name = "ReadingLog";
             ReadingLog.Padding = new Padding(3);
-            ReadingLog.Size = new Size(650, 611);
+            ReadingLog.Size = new Size(650, 575);
             ReadingLog.TabIndex = 1;
             ReadingLog.Text = "Reading Log";
-            ReadingLog.UseVisualStyleBackColor = true;
             // 
             // ReadingLButton
             // 
@@ -158,21 +169,11 @@
             HomeButton.TextImageRelation = TextImageRelation.ImageAboveText;
             HomeButton.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Rockwell Condensed", 30F);
-            label1.Location = new Point(269, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 59);
-            label1.TabIndex = 0;
-            label1.Text = "Timer";
-            // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(232, 214, 192);
             ClientSize = new Size(682, 973);
             Controls.Add(splitContainer1);
             ForeColor = SystemColors.ActiveCaptionText;

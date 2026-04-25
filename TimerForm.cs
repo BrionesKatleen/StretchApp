@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using System.Collections.Generic;
 
 namespace StretchApp
 {
@@ -69,22 +70,34 @@ namespace StretchApp
         private void InitializeForm()
         {
             Text = "Pomodoro Timer";
+
             var screen = Screen.PrimaryScreen.WorkingArea;
+
             int width = (int)(screen.Width * 0.45);
             int height = (int)(screen.Height * 0.85);
+
             width = Math.Max(600, Math.Min(width, 1000));
             height = Math.Max(800, Math.Min(height, 1200));
-            StartPosition = FormStartPosition.CenterScreen;
-            MinimumSize = new Size(600, 800);
+
+            MinimumSize = new Size(480, 680);
             ClientSize = new Size(width, height);
+
             FormBorderStyle = FormBorderStyle.Sizable;
             MaximizeBox = true;
-            MinimumSize = new Size(480, 680);
-            BackColor = ColLight;
-            Font = new System.Drawing.Font("Segoe UI", 10f);
-            StartPosition = FormStartPosition.CenterScreen;
 
-            Resize += (S, E) => RepositionControls();
+            BackColor = ColLight;
+            this.Font = new System.Drawing.Font("Segoe UI", 10f);
+
+            // IMPORTANT: Use Manual for custom positioning
+            StartPosition = FormStartPosition.Manual;
+
+            // Position top-right of screen
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
+            int formWidth = this.Width;
+
+            this.Location = new Point(screenWidth - formWidth, 0);
+
+            Resize += (s, e) => RepositionControls();
         }
 
         private void BuildUi()

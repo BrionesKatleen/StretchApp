@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\StretchApp.csproj": {}
+    "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\StretchApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\StretchApp.csproj": {
+    "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\StretchApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\StretchApp.csproj",
+        "projectUniqueName": "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\StretchApp.csproj",
         "projectName": "StretchApp",
-        "projectPath": "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\StretchApp.csproj",
+        "projectPath": "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\StretchApp.csproj",
         "packagesPath": "C:\\Users\\KatleenBriones\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KatleenBriones\\source\\repos\\BrionesKatleen\\StretchApp\\obj\\",
+        "outputPath": "C:\\Users\\KatleenBriones\\source\\repos\\StretchApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KatleenBriones\\AppData\\Roaming\\NuGet\\NuGet.Config",
