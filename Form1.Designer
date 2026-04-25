@@ -1,0 +1,625 @@
+namespace WinFormsProject
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);    
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            linkLabel2 = new LinkLabel();
+            linkLabel3 = new LinkLabel();
+            linkLabel4 = new LinkLabel();
+            vScrollBar1 = new VScrollBar();
+            vScrollBar2 = new VScrollBar();
+            vScrollBar3 = new VScrollBar();
+            vScrollBar4 = new VScrollBar();
+            panel1 = new Panel();
+            maskedTextBox1 = new MaskedTextBox();
+            groupBox3 = new GroupBox();
+            progressBar3 = new ProgressBar();
+            linkLabel5 = new LinkLabel();
+            richTextBox9 = new RichTextBox();
+            richTextBox10 = new RichTextBox();
+            richTextBox11 = new RichTextBox();
+            richTextBox12 = new RichTextBox();
+            textBox3 = new TextBox();
+            groupBox1 = new GroupBox();
+            progressBar1 = new ProgressBar();
+            linkLabel1 = new LinkLabel();
+            richTextBox5 = new RichTextBox();
+            richTextBox6 = new RichTextBox();
+            richTextBox7 = new RichTextBox();
+            richTextBox8 = new RichTextBox();
+            textBox2 = new TextBox();
+            monthCalendar1 = new MonthCalendar();
+            panel3 = new Panel();
+            button5 = new Button();
+            groupBox2 = new GroupBox();
+            progressBar2 = new ProgressBar();
+            Tasks = new LinkLabel();
+            richTextBox4 = new RichTextBox();
+            richTextBox3 = new RichTextBox();
+            richTextBox2 = new RichTextBox();
+            richTextBox1 = new RichTextBox();
+            textBox4 = new TextBox();
+            panel2 = new Panel();
+            button1 = new Button();
+            pictureBox5 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            listBox1 = new ListBox();
+            process2 = new System.Diagnostics.Process();
+            panel1.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox1.SuspendLayout();
+            panel3.SuspendLayout();
+            groupBox2.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            SuspendLayout();
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Book Antiqua", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            linkLabel2.LinkColor = Color.Black;
+            linkLabel2.Location = new Point(227, 97);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(107, 34);
+            linkLabel2.TabIndex = 5;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "TO DO";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked_1;
+            // 
+            // linkLabel3
+            // 
+            linkLabel3.AutoSize = true;
+            linkLabel3.Font = new Font("Book Antiqua", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            linkLabel3.LinkColor = Color.Black;
+            linkLabel3.Location = new Point(547, 103);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new Size(208, 34);
+            linkLabel3.TabIndex = 6;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "IN PROGRESS";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
+            // 
+            // linkLabel4
+            // 
+            linkLabel4.AutoSize = true;
+            linkLabel4.Font = new Font("Book Antiqua", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            linkLabel4.LinkColor = Color.Black;
+            linkLabel4.Location = new Point(949, 103);
+            linkLabel4.Name = "linkLabel4";
+            linkLabel4.Size = new Size(99, 34);
+            linkLabel4.TabIndex = 7;
+            linkLabel4.TabStop = true;
+            linkLabel4.Text = "DONE";
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.AllowDrop = true;
+            vScrollBar1.Location = new Point(277, 136);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.ScaleScrollBarForDpiChange = false;
+            vScrollBar1.Size = new Size(23, 513);
+            vScrollBar1.TabIndex = 10;
+            // 
+            // vScrollBar2
+            // 
+            vScrollBar2.AllowDrop = true;
+            vScrollBar2.Location = new Point(622, 136);
+            vScrollBar2.Name = "vScrollBar2";
+            vScrollBar2.ScaleScrollBarForDpiChange = false;
+            vScrollBar2.Size = new Size(23, 513);
+            vScrollBar2.TabIndex = 11;
+            // 
+            // vScrollBar3
+            // 
+            vScrollBar3.AllowDrop = true;
+            vScrollBar3.Location = new Point(973, 139);
+            vScrollBar3.Name = "vScrollBar3";
+            vScrollBar3.ScaleScrollBarForDpiChange = false;
+            vScrollBar3.Size = new Size(23, 513);
+            vScrollBar3.TabIndex = 12;
+            // 
+            // vScrollBar4
+            // 
+            vScrollBar4.AllowDrop = true;
+            vScrollBar4.Location = new Point(1314, 139);
+            vScrollBar4.Maximum = 250;
+            vScrollBar4.Name = "vScrollBar4";
+            vScrollBar4.ScaleScrollBarForDpiChange = false;
+            vScrollBar4.Size = new Size(23, 513);
+            vScrollBar4.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            panel1.AccessibleRole = AccessibleRole.None;
+            panel1.AutoScroll = true;
+            panel1.BackColor = Color.Linen;
+            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(maskedTextBox1);
+            panel1.Controls.Add(groupBox3);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(monthCalendar1);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(groupBox2);
+            panel1.Controls.Add(linkLabel2);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(linkLabel4);
+            panel1.Controls.Add(linkLabel3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(textBox1);
+            panel1.Location = new Point(-1, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1397, 749);
+            panel1.TabIndex = 15;
+            panel1.Paint += panel1_Paint;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(1147, 228);
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(234, 27);
+            maskedTextBox1.TabIndex = 26;
+            maskedTextBox1.Text = "Choose the date";
+            // 
+            // groupBox3
+            // 
+            groupBox3.AccessibleRole = AccessibleRole.ScrollBar;
+            groupBox3.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox3.Controls.Add(progressBar3);
+            groupBox3.Controls.Add(linkLabel5);
+            groupBox3.Controls.Add(richTextBox9);
+            groupBox3.Controls.Add(richTextBox10);
+            groupBox3.Controls.Add(richTextBox11);
+            groupBox3.Controls.Add(richTextBox12);
+            groupBox3.Controls.Add(textBox3);
+            groupBox3.ForeColor = Color.Wheat;
+            groupBox3.Location = new Point(867, 140);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(247, 519);
+            groupBox3.TabIndex = 25;
+            groupBox3.TabStop = false;
+            // 
+            // progressBar3
+            // 
+            progressBar3.Location = new Point(44, 75);
+            progressBar3.Name = "progressBar3";
+            progressBar3.Size = new Size(174, 23);
+            progressBar3.TabIndex = 17;
+            // 
+            // linkLabel5
+            // 
+            linkLabel5.AutoSize = true;
+            linkLabel5.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
+            linkLabel5.Location = new Point(35, 42);
+            linkLabel5.Name = "linkLabel5";
+            linkLabel5.Size = new Size(76, 20);
+            linkLabel5.TabIndex = 9;
+            linkLabel5.TabStop = true;
+            linkLabel5.Text = "linkLabel5";
+            // 
+            // richTextBox9
+            // 
+            richTextBox9.AccessibleName = "";
+            richTextBox9.Location = new Point(35, 454);
+            richTextBox9.Name = "richTextBox9";
+            richTextBox9.Size = new Size(174, 26);
+            richTextBox9.TabIndex = 12;
+            richTextBox9.Text = "+Add";
+            // 
+            // richTextBox10
+            // 
+            richTextBox10.AccessibleName = "";
+            richTextBox10.Location = new Point(35, 341);
+            richTextBox10.Name = "richTextBox10";
+            richTextBox10.Size = new Size(174, 26);
+            richTextBox10.TabIndex = 11;
+            richTextBox10.Text = "+Add";
+            // 
+            // richTextBox11
+            // 
+            richTextBox11.AccessibleName = "";
+            richTextBox11.Location = new Point(35, 246);
+            richTextBox11.Name = "richTextBox11";
+            richTextBox11.Size = new Size(174, 22);
+            richTextBox11.TabIndex = 10;
+            richTextBox11.Text = "+Add";
+            // 
+            // richTextBox12
+            // 
+            richTextBox12.AccessibleName = "";
+            richTextBox12.Location = new Point(35, 135);
+            richTextBox12.Name = "richTextBox12";
+            richTextBox12.Size = new Size(174, 26);
+            richTextBox12.TabIndex = 9;
+            richTextBox12.Text = "+Add";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(20, 36);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ScrollBars = ScrollBars.Horizontal;
+            textBox3.Size = new Size(210, 471);
+            textBox3.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            groupBox1.AccessibleRole = AccessibleRole.ScrollBar;
+            groupBox1.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox1.Controls.Add(progressBar1);
+            groupBox1.Controls.Add(linkLabel1);
+            groupBox1.Controls.Add(richTextBox5);
+            groupBox1.Controls.Add(richTextBox6);
+            groupBox1.Controls.Add(richTextBox7);
+            groupBox1.Controls.Add(richTextBox8);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.ForeColor = Color.Wheat;
+            groupBox1.Location = new Point(531, 140);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(247, 519);
+            groupBox1.TabIndex = 24;
+            groupBox1.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(35, 75);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(174, 23);
+            progressBar1.TabIndex = 16;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
+            linkLabel1.Location = new Point(35, 42);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(76, 20);
+            linkLabel1.TabIndex = 9;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "linkLabel1";
+            // 
+            // richTextBox5
+            // 
+            richTextBox5.AccessibleName = "";
+            richTextBox5.Location = new Point(35, 454);
+            richTextBox5.Name = "richTextBox5";
+            richTextBox5.Size = new Size(174, 26);
+            richTextBox5.TabIndex = 12;
+            richTextBox5.Text = "+Add";
+            // 
+            // richTextBox6
+            // 
+            richTextBox6.AccessibleName = "";
+            richTextBox6.Location = new Point(35, 341);
+            richTextBox6.Name = "richTextBox6";
+            richTextBox6.Size = new Size(174, 26);
+            richTextBox6.TabIndex = 11;
+            richTextBox6.Text = "+Add";
+            // 
+            // richTextBox7
+            // 
+            richTextBox7.AccessibleName = "";
+            richTextBox7.Location = new Point(35, 246);
+            richTextBox7.Name = "richTextBox7";
+            richTextBox7.Size = new Size(174, 22);
+            richTextBox7.TabIndex = 10;
+            richTextBox7.Text = "+Add";
+            // 
+            // richTextBox8
+            // 
+            richTextBox8.AccessibleName = "";
+            richTextBox8.Location = new Point(35, 135);
+            richTextBox8.Name = "richTextBox8";
+            richTextBox8.Size = new Size(174, 26);
+            richTextBox8.TabIndex = 9;
+            richTextBox8.Text = "+Add";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(20, 36);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ScrollBars = ScrollBars.Horizontal;
+            textBox2.Size = new Size(210, 471);
+            textBox2.TabIndex = 1;
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(1126, 9);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 9;
+            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ButtonHighlight;
+            panel3.Controls.Add(button5);
+            panel3.ForeColor = Color.LightGray;
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(98, 647);
+            panel3.TabIndex = 8;
+            // 
+            // button5
+            // 
+            button5.ForeColor = Color.Black;
+            button5.Image = Properties.Resources.home2;
+            button5.Location = new Point(3, 157);
+            button5.Name = "button5";
+            button5.Size = new Size(85, 78);
+            button5.TabIndex = 11;
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.AccessibleRole = AccessibleRole.ScrollBar;
+            groupBox2.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox2.Controls.Add(progressBar2);
+            groupBox2.Controls.Add(Tasks);
+            groupBox2.Controls.Add(richTextBox4);
+            groupBox2.Controls.Add(richTextBox3);
+            groupBox2.Controls.Add(richTextBox2);
+            groupBox2.Controls.Add(richTextBox1);
+            groupBox2.Controls.Add(textBox4);
+            groupBox2.ForeColor = Color.Wheat;
+            groupBox2.Location = new Point(164, 137);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(247, 519);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            // 
+            // progressBar2
+            // 
+            progressBar2.Location = new Point(40, 78);
+            progressBar2.Name = "progressBar2";
+            progressBar2.RightToLeftLayout = true;
+            progressBar2.Size = new Size(174, 23);
+            progressBar2.TabIndex = 17;
+            progressBar2.Tag = "progress";
+            // 
+            // Tasks
+            // 
+            Tasks.AutoSize = true;
+            Tasks.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
+            Tasks.Location = new Point(35, 42);
+            Tasks.Name = "Tasks";
+            Tasks.Size = new Size(42, 20);
+            Tasks.TabIndex = 9;
+            Tasks.TabStop = true;
+            Tasks.Text = "Tasks";
+            Tasks.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // richTextBox4
+            // 
+            richTextBox4.AccessibleName = "";
+            richTextBox4.Location = new Point(35, 454);
+            richTextBox4.Name = "richTextBox4";
+            richTextBox4.Size = new Size(174, 26);
+            richTextBox4.TabIndex = 12;
+            richTextBox4.Text = "+Add";
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.AccessibleName = "";
+            richTextBox3.Location = new Point(35, 341);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(174, 26);
+            richTextBox3.TabIndex = 11;
+            richTextBox3.Text = "+Add";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.AccessibleName = "";
+            richTextBox2.Location = new Point(35, 246);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(174, 22);
+            richTextBox2.TabIndex = 10;
+            richTextBox2.Text = "+Add";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.AccessibleName = "";
+            richTextBox1.Location = new Point(35, 135);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(179, 26);
+            richTextBox1.TabIndex = 9;
+            richTextBox1.Text = "+Add";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(20, 36);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.ScrollBars = ScrollBars.Horizontal;
+            textBox4.Size = new Size(210, 471);
+            textBox4.TabIndex = 1;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.Info;
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(pictureBox5);
+            panel2.ForeColor = Color.White;
+            panel2.Location = new Point(3, 653);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1394, 76);
+            panel2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.ForeColor = Color.Black;
+            button1.Image = Properties.Resources.settings;
+            button1.Location = new Point(6, -19);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 92);
+            button1.TabIndex = 12;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.White;
+            pictureBox5.Location = new Point(-3, -13);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(101, 75);
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label1.Location = new Point(170, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 28);
+            label1.TabIndex = 16;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F);
+            label2.Location = new Point(170, 48);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 20);
+            label2.TabIndex = 17;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(170, 340);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(240, 27);
+            textBox1.TabIndex = 23;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(170, 80);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(240, 140);
+            listBox1.TabIndex = 18;
+            // 
+            // process2
+            // 
+            process2.StartInfo.CreateNewProcessGroup = false;
+            process2.StartInfo.Domain = "";
+            process2.StartInfo.LoadUserProfile = false;
+            process2.StartInfo.Password = null;
+            process2.StartInfo.StandardErrorEncoding = null;
+            process2.StartInfo.StandardInputEncoding = null;
+            process2.StartInfo.StandardOutputEncoding = null;
+            process2.StartInfo.UseCredentialsForNetworkingOnly = false;
+            process2.StartInfo.UserName = "";
+            process2.SynchronizingObject = this;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1392, 719);
+            Controls.Add(panel1);
+            Controls.Add(vScrollBar4);
+            Controls.Add(vScrollBar3);
+            Controls.Add(vScrollBar2);
+            Controls.Add(vScrollBar1);
+            ForeColor = SystemColors.ActiveCaption;
+            Name = "Form1";
+            Text = "A";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panel3.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+        // notepad group boxes removed
+        private LinkLabel linkLabel2;
+        private LinkLabel linkLabel3;
+        private LinkLabel linkLabel4;
+        private VScrollBar vScrollBar1;
+        private VScrollBar vScrollBar2;
+        private VScrollBar vScrollBar3;
+        private VScrollBar vScrollBar4;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private PictureBox pictureBox5;
+        // notepad textboxes removed
+        private GroupBox groupBox2;
+        private TextBox textBox4;
+        private RichTextBox richTextBox1;
+        private LinkLabel Tasks;
+        private RichTextBox richTextBox4;
+        private RichTextBox richTextBox3;
+        private RichTextBox richTextBox2;
+        private Button button1;
+        private MonthCalendar monthCalendar1;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Label label1;
+        private Label label2;
+        private ListBox listBox1;
+        private TextBox textBox1;
+        private GroupBox groupBox3;
+        private LinkLabel linkLabel5;
+        private RichTextBox richTextBox9;
+        private RichTextBox richTextBox10;
+        private RichTextBox richTextBox11;
+        private RichTextBox richTextBox12;
+        private TextBox textBox3;
+        private GroupBox groupBox1;
+        private LinkLabel linkLabel1;
+        private RichTextBox richTextBox5;
+        private RichTextBox richTextBox6;
+        private RichTextBox richTextBox7;
+        private RichTextBox richTextBox8;
+        private TextBox textBox2;
+        private DateTimePicker dateTimePicker1;
+        private Button button5;
+        private ProgressBar progressBar1;
+        private ProgressBar progressBar2;
+        private MaskedTextBox maskedTextBox1;
+        private System.Diagnostics.Process process2;
+        private ProgressBar progressBar3;
+    }
+}
