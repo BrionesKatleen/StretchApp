@@ -35,13 +35,15 @@
             TaskPageButton = new Button();
             Home = new Button();
             panel1 = new Panel();
+            MainSection = new Panel();
             SearchButton = new Button();
             AddButton = new Button();
             pictureBox1 = new PictureBox();
-            MainSection = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             NavBar.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // NavBar
@@ -51,7 +53,7 @@
             NavBar.Controls.Add(TimerPageButton);
             NavBar.Controls.Add(TaskPageButton);
             NavBar.Controls.Add(Home);
-            NavBar.Location = new Point(0, 900);
+            NavBar.Location = new Point(3, 902);
             NavBar.Name = "NavBar";
             NavBar.Size = new Size(682, 73);
             NavBar.TabIndex = 0;
@@ -110,10 +112,17 @@
             panel1.Controls.Add(SearchButton);
             panel1.Controls.Add(AddButton);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(682, 73);
             panel1.TabIndex = 1;
+            // 
+            // MainSection
+            // 
+            MainSection.Location = new Point(3, 82);
+            MainSection.Name = "MainSection";
+            MainSection.Size = new Size(682, 814);
+            MainSection.TabIndex = 2;
             // 
             // SearchButton
             // 
@@ -149,12 +158,15 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // MainSection
+            // flowLayoutPanel1
             // 
-            MainSection.Location = new Point(0, 70);
-            MainSection.Name = "MainSection";
-            MainSection.Size = new Size(682, 830);
-            MainSection.TabIndex = 2;
+            flowLayoutPanel1.Controls.Add(panel1);
+            flowLayoutPanel1.Controls.Add(MainSection);
+            flowLayoutPanel1.Controls.Add(NavBar);
+            flowLayoutPanel1.Location = new Point(-3, -2);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(685, 975);
+            flowLayoutPanel1.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -162,9 +174,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(232, 214, 192);
             ClientSize = new Size(682, 973);
-            Controls.Add(MainSection);
-            Controls.Add(panel1);
-            Controls.Add(NavBar);
+            Controls.Add(flowLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.Manual;
@@ -173,6 +183,7 @@
             NavBar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -188,5 +199,6 @@
         private PictureBox pictureBox1;
         private Button SearchButton;
         private Panel MainSection;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

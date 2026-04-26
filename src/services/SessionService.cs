@@ -1,81 +1,32 @@
 ﻿using StretchApp.src.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using StretchApp.src.repositories;
 
 namespace StretchApp.src.services
 {
     public class SessionService
     {
-        private readonly List<Session> _sessions = new();
-        private int _nextId = 1;
+        private readonly SessionRepository _repository;
+        private Session _currentSession;
 
-        public int TotalSessionsToday =>
-            _sessions.Count(s =>
-                s != null &&
-                s.IsCompleted &&
-                s.StartTime.Date == DateTime.Today);
-
-        public int FocusMinutesToday =>
-            _sessions
-                .Where(s =>
-                    s != null &&
-                    s.IsCompleted &&
-                    s.Type == SessionType.Focus &&
-                    s.StartTime.Date == DateTime.Today)
-                .Sum(s => s.DurationMinutes);
-
-        public int BreakMinutesToday =>
-            _sessions
-                .Where(s =>
-                    s != null &&
-                    s.IsCompleted &&
-                    s.Type == SessionType.Break &&
-                    s.StartTime.Date == DateTime.Today)
-                .Sum(s => s.DurationMinutes);
-
-        public IReadOnlyList<Session> AllSessions => _sessions.AsReadOnly();
-
-        public Session CreateSession(SessionType type, int durationMinutes)
+        public SessionService()
         {
-            var session = new Session(_nextId++, type, durationMinutes);
-            _sessions.Add(session);
-            return session;
+            _repository = new SessionRepository();
         }
 
-        public void RemoveIncompleteSession(Session session)
+        public void StartSession(SessionType type, int duration)
         {
-            if (session == null) return;
-            if (!session.IsCompleted)
-            {
-                _sessions.Remove(session);
+            _currentSession = new Session(0, type, duration);
 
-                _nextId = _sessions.Count > 0
-                    ? _sessions.Max(s => s.Id) + 1
-                    : 1;
-            }
+            _repository.InsertSession(_currentSession);
         }
 
-        public void CompleteSession(Session session)
+        public void CompleteCurrentSession()
         {
-            if (session == null) return;
-            if (!session.IsCompleted)
-                session.Complete();
-        }
+            if (_currentSession == null) return;
 
-        public List<Session> GetSessionsToday()
-        {
-            return _sessions
-                .Where(s =>
-                    s != null &&
-                    s.StartTime.Date == DateTime.Today)
-                .ToList();
-        }
+            _currentSession.Complete();
 
-        public void ClearAll()
-        {
-            _sessions.Clear();
-            _nextId = 1;
+            _repository.UpdateSession(_currentSession);
         }
     }
 }
