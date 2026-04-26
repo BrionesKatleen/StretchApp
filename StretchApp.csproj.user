@@ -4,6 +4,12 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="src\views\HomeUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\views\Timer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

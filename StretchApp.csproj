@@ -43,10 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="obj\Debug\net10.0-windows\apphost.exe" />
     <None Include="obj\Debug\net10.0-windows\refint\StretchApp.dll" />
     <None Include="obj\Debug\net10.0-windows\ref\StretchApp.dll" />

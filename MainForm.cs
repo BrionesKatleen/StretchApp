@@ -1,11 +1,8 @@
-﻿using Org.BouncyCastle.Asn1.Cmp;
+﻿using StretchApp.src.views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+
 
 namespace StretchApp
 {
@@ -20,11 +17,43 @@ namespace StretchApp
         {
             int screenwidth = Screen.PrimaryScreen.Bounds.Width;
             int formwidth = this.Width;
+
             this.Location = new Point(screenwidth - formwidth, 0);
+
+            ShowHomePage();
         }
+
+        private void LoadPage(UserControl page)
+        {
+            page.Dock = DockStyle.Fill;
+
+            MainSection.Controls.Clear();
+            MainSection.Controls.Add(page);
+        }
+
+        private void ShowHomePage()
+        {
+            LoadPage(new HomeUserCtrl());
+        }
+
         private void Home_Click(object sender, EventArgs e)
         {
+            ShowHomePage();
+        }
 
+        private void TimerPageButton_Click(object sender, EventArgs e)
+        {
+            LoadPage(new StretchApp.src.views.Timer());
+        }
+
+        private void TaskPageButton_Click(object sender, EventArgs e)
+        {
+            // Future TaskBoard Page
+        }
+
+        private void LogPageButton_Click(object sender, EventArgs e)
+        {
+            // Future Log Page
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -33,21 +62,6 @@ namespace StretchApp
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TaskPageButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void TimerPageButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogPageButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace StretchApp.src.models
 {
-    internal class ConnectionSQL
+    public class ConnectionSQL
     {
         // Connection string to connect to the MySQL database.
         // Note: Modify uid and password according to your local MySQL setup before running the application.
