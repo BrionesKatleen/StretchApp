@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net10.0-windows\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net10.0-windows\StretchApp.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net10.0-windows\StretchApp.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net10.0-windows\StretchApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net10.0-windows\StretchApp.designer.deps.json" />
+    <Content Include="obj\Debug\net10.0-windows\StretchApp.designer.runtimeconfig.json" />
+    <Content Include="obj\Debug\net10.0-windows\StretchApp.sourcelink.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\StretchApp.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.6.0" />
   </ItemGroup>
 
@@ -29,6 +44,31 @@
 
   <ItemGroup>
     <Folder Include="src\repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net10.0-windows\apphost.exe" />
+    <None Include="obj\Debug\net10.0-windows\refint\StretchApp.dll" />
+    <None Include="obj\Debug\net10.0-windows\ref\StretchApp.dll" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.assets.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.csproj.Up2Date" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.dll" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.HomeForm.resources" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.pdb" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.Properties.Resources.resources" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.src.services.SessionService.resources" />
+    <None Include="obj\Debug\net10.0-windows\StretchApp.StartForm.resources" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\StretchApp.csproj.nuget.g.props" />
+    <None Include="obj\StretchApp.csproj.nuget.g.targets" />
+    <None Include="StretchApp.sln" />
   </ItemGroup>
 
 </Project>

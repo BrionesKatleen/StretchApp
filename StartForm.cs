@@ -21,13 +21,13 @@ public partial class StartForm : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
-        HomeForm home = new HomeForm();
-
-        home.Show();   // then show Form2
+        //HomeForm home = new HomeForm();
+        MainForm main = new MainForm();
+        main.Show();   // then show Form2
 
         this.Hide();   // hide 
 
-        home.FormClosed += (s, args) => this.Close();
+        main.FormClosed += (s, args) => this.Close();
     }
 
     private void pictureBox1_Click(object sender, EventArgs e)
