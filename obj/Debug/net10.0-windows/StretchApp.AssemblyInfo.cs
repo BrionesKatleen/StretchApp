@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a182f753430090b38781b2527f567d995c45a13")]
 [assembly: System.Reflection.AssemblyProductAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StretchApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
