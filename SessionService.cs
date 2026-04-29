@@ -1,66 +1,156 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Windows.Forms;
 
 namespace StretchApp
 {
-    public class SessionService
+    public enum TimerState
     {
-        private List<Session> _sessions = new List<Session>();
-        private int _nextId = 1;
+        Idle,
+        Running,
+        Paused
+    }
 
-        public int TotalSessionsToday =>
-            _sessions.Count(s => s.StartTime.Date == DateTime.Today && s.IsCompleted);
+    public class SessionController
+    {
+        private readonly SessionService _sessionService;
+        private readonly System.Windows.Forms.Timer _timer;
+        private Session _currentSession;
+        private int _remainSec;
+        private int _focusDurMin;
+        private int _breakDurMin;
 
-        public int FocusMinutesToday =>
-            _sessions.Where(s => s.Type == SessionType.Focus && s.IsCompleted && s.StartTime.Date == DateTime.Today)
-                     .Sum(s => s.DurationMinutes);
-
-        public int BreakMinutesToday =>
-            _sessions.Where(s => s.Type == SessionType.Break && s.IsCompleted && s.StartTime.Date == DateTime.Today)
-                     .Sum(s => s.DurationMinutes);
-
-        public int TotalFocusSessions =>
-            _sessions.Count(s => s.Type == SessionType.Focus && s.IsCompleted);
-
-        public int TotalBreakSessions =>
-            _sessions.Count(s => s.Type == SessionType.Break && s.IsCompleted);
-
-        public IReadOnlyList<Session> AllSessions => _sessions.AsReadOnly();
-
-        public Session CreateSession(SessionType type, int durationMinutes)
+        public TimerState State { get; private set; } = TimerState.Idle;
+        public SessionType CurrentMode { get; private set; } = SessionType.Focus;
+        public int RemSec => _remainSec;
+        public int FocusDurMin => _focusDurMin;
+        public int BreakDurationMinutes => _breakDurMin;
+        public event EventHandler<int> tick;
+        public event EventHandler SessionComplete;
+        public event EventHandler StateChange;
+        
+        public SessionController(SessionService sessionService, int FocusMins = 25, int BreakMins = 5)
         {
-            var session = new Session(_nextId++, type, durationMinutes);
-            _sessions.Add(session);
-            return session;
+            _sessionService = sessionService;
+            _focusDurMin = FocusMins;
+            _breakDurMin = BreakMins;
+            _remainSec = FocusMins * 60;
+
+            _timer = new System.Windows.Forms.Timer();
+            _timer.Interval = 1000;
+            _timer.Tick += OnTimerTick;
         }
 
-        public void CompleteSession(Session session)
+        public void Start()
         {
-            if (session != null && !session.IsCompleted)
+            if (State == TimerState.Idle)
             {
-                session.Complete();
+                int duration = CurrentMode == SessionType.Focus ? _focusDurMin : _breakDurMin;
+                _currentSession = _sessionService.CreateSession(CurrentMode, duration);
+                _remainSec = duration * 60;
+            }
+            State = TimerState.Running;
+            _timer.Start();
+            StateChange?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void Pause()
+        {
+            if (State == TimerState.Running)
+            {
+                State = TimerState.Paused;
+                _timer.Stop();
+                StateChange?.Invoke(this, EventArgs.Empty);
             }
         }
 
-        public void RemoveIncompleteSession(Session session)
+        public void Resume()
         {
-            if (session != null && !session.IsCompleted)
+            if (State == TimerState.Paused)
             {
-                _sessions.Remove(session);
-                _nextId = _sessions.Count > 0 ? _sessions.Max(s => s.Id) + 1 : 1;
+                State = TimerState.Running;
+                _timer.Start();
+                StateChange?.Invoke(this, EventArgs.Empty);
             }
         }
 
-        public List<Session> GetSessionsToday()
+        public void Reset()
         {
-            return _sessions.Where(s => s.StartTime.Date == DateTime.Today).ToList();
+            _timer.Stop();
+
+            if (_currentSession != null && !_currentSession.IsCompleted)
+                _sessionService.RemoveIncompleteSession(_currentSession);
+
+            _currentSession = null;
+            State = TimerState.Idle;
+            int duration = CurrentMode == SessionType.Focus ? _focusDurMin : _breakDurMin;
+            _remainSec = duration * 60;
+            StateChange?.Invoke(this, EventArgs.Empty);
+            tick?.Invoke(this, _remainSec);
         }
 
-        public void ClearAll()
+        public void SetMode(SessionType mode)
         {
-            _sessions.Clear();
-            _nextId = 1;
+            if (State == TimerState.Running || State == TimerState.Paused)
+                Reset();
+
+            CurrentMode = mode;
+            int duration = mode == SessionType.Focus ? _focusDurMin : _breakDurMin;
+            _remainSec = duration * 60;
+            StateChange?.Invoke(this, EventArgs.Empty);
+            tick?.Invoke(this, _remainSec);
+        }
+
+        public void SetFocusDuration(int minutes)
+        {
+            _focusDurMin = minutes;
+            if (CurrentMode == SessionType.Focus && State == TimerState.Idle)
+            {
+                _remainSec = minutes * 60;
+                tick?.Invoke(this, _remainSec);
+            }
+        }
+
+        public void SetBreakDuration(int minutes)
+        {
+            _breakDurMin = minutes;
+            if (CurrentMode == SessionType.Break && State == TimerState.Idle)
+            {
+                _remainSec = minutes * 60;
+                tick?.Invoke(this, _remainSec);
+            }
+        }
+
+        private void OnTimerTick(object sender, EventArgs e)
+        {
+            _remainSec--;
+            tick?.Invoke(this, _remainSec);
+            if (_remainSec <= 0)
+            {
+                _timer.Stop();
+                State = TimerState.Idle;
+                if (_currentSession != null)
+                    _sessionService.CompleteSession(_currentSession);
+                _currentSession = null;
+                SessionComplete?.Invoke(this, EventArgs.Empty);
+                StateChange?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        public void AdjustTime(int minutes)
+        {
+            if (State != TimerState.Idle) return;
+
+            int duration = CurrentMode == SessionType.Focus ? _focusDurMin : _breakDurMin;
+            int minSeconds = 60;
+            int maxSeconds = 120 * 60;
+
+            _remainSec = Math.Clamp(_remainSec + minutes * 60, minSeconds, maxSeconds);
+            tick?.Invoke(this, _remainSec);
+        }
+
+        public void Dispose()
+        {
+            _timer?.Dispose();
         }
     }
 }
