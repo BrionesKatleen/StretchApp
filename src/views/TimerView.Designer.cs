@@ -1,6 +1,6 @@
 ﻿namespace StretchApp.src.views
 {
-    partial class Timer
+    partial class TimerView
     {
         /// <summary> 
         /// Required designer variable.

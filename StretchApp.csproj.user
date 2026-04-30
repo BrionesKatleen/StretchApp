@@ -4,10 +4,19 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="src\views\HomeUserCtrl.cs">
+    <Compile Update="src\views\HomeView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="src\views\Timer.cs">
+    <Compile Update="src\views\TaskBoardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\views\TaskCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\views\TimerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\views\AddTaskView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="StartForm.cs">

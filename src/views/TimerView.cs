@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace StretchApp.src.views
 {
-    public partial class Timer : UserControl
+    public partial class TimerView : UserControl
     {
         private SessionController _controller;
 
-        public Timer()
+        public TimerView()
         {
             InitializeComponent();
 
