@@ -21,7 +21,6 @@ partial class TaskCardView
         lblTitle = new Label();
         lblPriority = new Label();
         lblDeadline = new Label();
-        lblMeta = new Label();
         lblNotes = new Label();
         btnEdit = new Button();
         btnDelete = new Button();
@@ -69,17 +68,6 @@ partial class TaskCardView
         lblDeadline.TabIndex = 3;
         lblDeadline.Text = "Apr 4, 2026";
         // 
-        // lblMeta
-        // 
-        lblMeta.AutoSize = true;
-        lblMeta.Font = new Font("Segoe UI", 8.5F);
-        lblMeta.ForeColor = Color.DimGray;
-        lblMeta.Location = new Point(255, 51);
-        lblMeta.Name = "lblMeta";
-        lblMeta.Size = new Size(68, 20);
-        lblMeta.TabIndex = 4;
-        lblMeta.Text = "1.5 hours";
-        // 
         // lblNotes
         // 
         lblNotes.AutoSize = true;
@@ -126,19 +114,18 @@ partial class TaskCardView
         // TaskCardView
         // 
         BackColor = Color.FromArgb(245, 236, 227);
-        BorderStyle = BorderStyle.FixedSingle;
         Controls.Add(chkCompleted);
         Controls.Add(lblTitle);
         Controls.Add(lblPriority);
         Controls.Add(lblDeadline);
-        Controls.Add(lblMeta);
         Controls.Add(lblNotes);
         Controls.Add(btnEdit);
         Controls.Add(btnDelete);
+        Font = new Font("Microsoft Sans Serif", 9F);
         Margin = new Padding(8);
         Name = "TaskCardView";
         Padding = new Padding(15);
-        Size = new Size(668, 113);
+        Size = new Size(670, 115);
         ResumeLayout(false);
         PerformLayout();
     }
@@ -149,7 +136,6 @@ partial class TaskCardView
     public Label lblTitle;
     public Label lblPriority;
     public Label lblDeadline;
-    public Label lblMeta;
     public Label lblNotes;
     public Button btnEdit;
     public Button btnDelete;

@@ -1,7 +1,4 @@
 ﻿using StretchApp.src.views;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 
 namespace StretchApp

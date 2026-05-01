@@ -49,15 +49,20 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(20, 452);
+            textBox1.BackColor = Color.FromArgb(245, 236, 227);
+            textBox1.Font = new Font("Microsoft Sans Serif", 10F);
+            textBox1.Location = new Point(24, 424);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(464, 27);
+            textBox1.PlaceholderText = "Add additional notes...";
+            textBox1.Size = new Size(460, 100);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(20, 517);
+            button1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
+            button1.Location = new Point(20, 544);
             button1.Name = "button1";
             button1.Size = new Size(230, 53);
             button1.TabIndex = 1;
@@ -68,7 +73,9 @@
             // 
             button2.BackColor = Color.FromArgb(117, 86, 84);
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(256, 517);
+            button2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(256, 544);
             button2.Name = "button2";
             button2.Size = new Size(230, 53);
             button2.TabIndex = 2;
@@ -78,16 +85,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(20, 409);
+            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.Location = new Point(29, 402);
             label1.Name = "label1";
-            label1.Size = new Size(48, 20);
+            label1.Size = new Size(48, 18);
             label1.TabIndex = 3;
             label1.Text = "Notes";
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(233, 212, 187);
+            button3.BackColor = Color.White;
             button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Microsoft Sans Serif", 9F);
             button3.Location = new Point(20, 359);
             button3.Name = "button3";
             button3.Size = new Size(154, 29);
@@ -97,8 +106,9 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(117, 86, 84);
+            button4.BackColor = Color.White;
             button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Microsoft Sans Serif", 9F);
             button4.Location = new Point(180, 359);
             button4.Name = "button4";
             button4.Size = new Size(144, 29);
@@ -108,8 +118,9 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.FromArgb(102, 63, 64);
+            button5.BackColor = Color.White;
             button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Microsoft Sans Serif", 9F);
             button5.Location = new Point(330, 359);
             button5.Name = "button5";
             button5.Size = new Size(154, 29);
@@ -120,32 +131,39 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(20, 321);
+            label2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label2.Location = new Point(24, 335);
             label2.Name = "label2";
-            label2.Size = new Size(55, 20);
+            label2.Size = new Size(56, 18);
             label2.TabIndex = 7;
             label2.Text = "Status*";
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(245, 236, 227);
+            dateTimePicker1.CalendarTitleBackColor = Color.FromArgb(245, 236, 227);
+            dateTimePicker1.CalendarTitleForeColor = Color.FromArgb(245, 236, 227);
+            dateTimePicker1.Font = new Font("Microsoft Sans Serif", 9F);
             dateTimePicker1.Location = new Point(20, 272);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(464, 27);
+            dateTimePicker1.Size = new Size(464, 24);
             dateTimePicker1.TabIndex = 8;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(20, 235);
+            label3.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label3.Location = new Point(24, 248);
             label3.Name = "label3";
-            label3.Size = new Size(75, 20);
+            label3.Size = new Size(71, 18);
             label3.TabIndex = 9;
             label3.Text = "Deadline*";
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(102, 63, 64);
+            button6.BackColor = Color.White;
             button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Microsoft Sans Serif", 9F);
             button6.Location = new Point(330, 192);
             button6.Name = "button6";
             button6.Size = new Size(154, 29);
@@ -155,8 +173,9 @@
             // 
             // button7
             // 
-            button7.BackColor = Color.FromArgb(117, 86, 84);
+            button7.BackColor = Color.White;
             button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Microsoft Sans Serif", 9F);
             button7.Location = new Point(180, 192);
             button7.Name = "button7";
             button7.Size = new Size(144, 29);
@@ -166,8 +185,9 @@
             // 
             // button8
             // 
-            button8.BackColor = Color.FromArgb(233, 212, 187);
+            button8.BackColor = Color.White;
             button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Microsoft Sans Serif", 9F);
             button8.Location = new Point(20, 192);
             button8.Name = "button8";
             button8.Size = new Size(154, 29);
@@ -178,25 +198,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(20, 155);
+            label4.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label4.Location = new Point(23, 167);
             label4.Name = "label4";
-            label4.Size = new Size(62, 20);
+            label4.Size = new Size(60, 18);
             label4.TabIndex = 13;
             label4.Text = "Priority*";
             // 
             // textBox2
             // 
+            textBox2.BackColor = Color.FromArgb(245, 236, 227);
+            textBox2.Font = new Font("Microsoft Sans Serif", 10F);
             textBox2.Location = new Point(20, 112);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(464, 27);
+            textBox2.PlaceholderText = "Enter task title";
+            textBox2.Size = new Size(464, 26);
             textBox2.TabIndex = 14;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(20, 89);
+            label5.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label5.Location = new Point(24, 90);
             label5.Name = "label5";
-            label5.Size = new Size(75, 20);
+            label5.Size = new Size(78, 18);
             label5.TabIndex = 15;
             label5.Text = "Task Title*";
             // 
@@ -210,10 +235,11 @@
             label6.TabIndex = 16;
             label6.Text = "Add New Task";
             // 
-            // UserControl2
+            // AddTaskView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(textBox2);
@@ -231,7 +257,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
-            Name = "UserControl2";
+            Name = "AddTaskView";
             Size = new Size(512, 643);
             ResumeLayout(false);
             PerformLayout();

@@ -1,7 +1,5 @@
 ﻿using StretchApp.src.models;
 using StretchApp.src.services;
-using System;
-using System.Windows.Forms;
 
 namespace StretchApp.src.controllers
 {
@@ -39,9 +37,14 @@ namespace StretchApp.src.controllers
         public void Reset()
         {
             _timer.Stop();
-            RemainingTime = TimeSpan.FromMinutes(_focusDuration);
+
+            RemainingTime = CurrentSessionType == SessionType.Focus
+                ? TimeSpan.FromMinutes(_focusDuration)
+                : TimeSpan.FromMinutes(5);
 
             Tick?.Invoke(RemainingTime);
+
+            _timer.Start();
         }
 
         public void SetFocusDuration(int minutes)

@@ -1,7 +1,5 @@
 ﻿using StretchApp.src.controllers;
 using StretchApp.src.models;
-using System;
-using System.Windows.Forms;
 
 namespace StretchApp.src.views
 {
@@ -12,6 +10,7 @@ namespace StretchApp.src.views
         public TimerView()
         {
             InitializeComponent();
+            ApplyUIStyling();
 
             _controller = new SessionController();
 
@@ -20,6 +19,28 @@ namespace StretchApp.src.views
 
             UpdateTimerDisplay(_controller.RemainingTime);
             UpdateSessionLabel(_controller.CurrentSessionType);
+        }
+
+        private void ApplyUIStyling()
+        {
+            // Main Panel
+            Helper.SetRoundness(panel1, 20);
+
+            // Circular-ish icon buttons
+            Helper.StyleRoundedButton(StartButton);
+            Helper.StyleRoundedButton(RestartButton);
+
+            Helper.MakeCircular(StartButton);
+            Helper.MakeCircular(RestartButton);
+
+            // Timer option buttons
+            Helper.StyleRoundedButton(TimerOpt1Btn);
+            Helper.StyleRoundedButton(TimerOpt2Btn);
+            Helper.StyleRoundedButton(TimerOpt3Btn);
+
+            Helper.SetRoundness(TimerOpt1Btn, 12);
+            Helper.SetRoundness(TimerOpt2Btn, 12);
+            Helper.SetRoundness(TimerOpt3Btn, 12);
         }
 
         private void StartButton_Click(object sender, EventArgs e)

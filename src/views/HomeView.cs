@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace StretchApp.src.views
+﻿namespace StretchApp.src.views
 {
     public partial class HomeView : UserControl
     {
@@ -20,6 +16,7 @@ namespace StretchApp.src.views
             timerControl = new StretchApp.src.views.TimerView();
 
             timerControl.Dock = DockStyle.None;
+            Helper.SetRoundness(timerControl, 28);
             timerControl.Size = new Size(664, 267);
 
             splitContainer1.Panel1.Controls.Clear();

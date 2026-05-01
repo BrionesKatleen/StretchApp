@@ -1,6 +1,4 @@
-﻿using StretchApp.src.models;
-
-namespace StretchApp.src.views;
+﻿namespace StretchApp.src.views;
 
 public partial class TaskCardView : UserControl
 {

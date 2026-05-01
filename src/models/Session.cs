@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StretchApp.src.models
+﻿namespace StretchApp.src.models
 {
     public enum SessionType
     {

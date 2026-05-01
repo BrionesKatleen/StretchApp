@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using StretchApp.src.models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StretchApp.src.tests
 {

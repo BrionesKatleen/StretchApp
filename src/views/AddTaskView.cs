@@ -1,8 +1,4 @@
 ﻿using StretchApp.src.controllers;
-using StretchApp.src.models;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace StretchApp
 {
@@ -119,15 +115,15 @@ namespace StretchApp
             switch (priority)
             {
                 case "Low":
-                    HighlightButton(button8);
+                    HighlightButton(button8, Color.FromArgb(233, 212, 187));
                     break;
 
                 case "Medium":
-                    HighlightButton(button7);
+                    HighlightButton(button7, Color.FromArgb(117, 86, 84));
                     break;
 
                 case "High":
-                    HighlightButton(button6);
+                    HighlightButton(button6, Color.FromArgb(102, 63, 64));
                     break;
             }
         }
@@ -152,15 +148,16 @@ namespace StretchApp
             switch (status)
             {
                 case "Not Started":
-                    HighlightButton(button3);
+                    HighlightButton(button3, Color.FromArgb(233, 212, 187));
                     break;
 
                 case "Ongoing":
-                    HighlightButton(button4);
+                    HighlightButton(button4, Color.FromArgb(117, 86, 84));
+
                     break;
 
                 case "Completed":
-                    HighlightButton(button5);
+                    HighlightButton(button5, Color.FromArgb(102, 63, 64));
                     break;
             }
         }
@@ -176,9 +173,9 @@ namespace StretchApp
 
         #region Styling Helpers
 
-        private void HighlightButton(Button btn)
+        private void HighlightButton(Button btn, Color highlightColor)
         {
-            btn.BackColor = Color.FromArgb(60, 120, 220);
+            btn.BackColor = highlightColor;
             btn.ForeColor = Color.White;
         }
 
