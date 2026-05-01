@@ -5,7 +5,6 @@
  * Created on: April 12 2026
  */
 
-using System;
 using MySql.Data.MySqlClient;
 
 namespace StretchApp.src.models

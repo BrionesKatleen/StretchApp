@@ -1,7 +1,4 @@
 ﻿using StretchApp.src.views;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 
 namespace StretchApp
@@ -33,7 +30,7 @@ namespace StretchApp
 
         private void ShowHomePage()
         {
-            LoadPage(new HomeUserCtrl());
+            LoadPage(new HomeView());
         }
 
         private void Home_Click(object sender, EventArgs e)
@@ -43,12 +40,12 @@ namespace StretchApp
 
         private void TimerPageButton_Click(object sender, EventArgs e)
         {
-            LoadPage(new StretchApp.src.views.Timer());
+            LoadPage(new StretchApp.src.views.TimerView());
         }
 
         private void TaskPageButton_Click(object sender, EventArgs e)
         {
-            // Future TaskBoard Page
+            LoadPage(new TaskBoardView());
         }
 
         private void LogPageButton_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace StretchApp.src.views
 {
-    partial class HomeUserCtrl
+    partial class HomeView
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            timerControl = new Timer();
+            timerControl = new TimerView();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.SuspendLayout();
@@ -74,6 +74,6 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private Timer timerControl;
+        private TimerView timerControl;
     }
 }
