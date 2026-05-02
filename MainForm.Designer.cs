@@ -69,18 +69,7 @@
             LogPageButton.TabIndex = 3;
             LogPageButton.UseVisualStyleBackColor = false;
             LogPageButton.Click += LogPageButton_Click;
-            // 
-            // TimerPageButton
-            // 
-            TimerPageButton.BackColor = Color.Transparent;
-            TimerPageButton.BackgroundImage = Properties.Resources.Timer;
-            TimerPageButton.BackgroundImageLayout = ImageLayout.Center;
-            TimerPageButton.Location = new Point(415, 15);
-            TimerPageButton.Name = "TimerPageButton";
-            TimerPageButton.Size = new Size(40, 40);
-            TimerPageButton.TabIndex = 2;
-            TimerPageButton.UseVisualStyleBackColor = false;
-            TimerPageButton.Click += TimerPageButton_Click;
+
             // 
             // TaskPageButton
             // 
