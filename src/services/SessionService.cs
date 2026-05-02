@@ -13,7 +13,7 @@ namespace StretchApp.src.services
             _repository = new SessionRepository();
         }
 
-        public void StartSession(SessionType type, int duration)
+        public void CreateSession(SessionType type, int duration)
         {
             _currentSession = new Session(0, type, duration);
 

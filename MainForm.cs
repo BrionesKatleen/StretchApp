@@ -1,5 +1,4 @@
-﻿using StretchApp.src.views;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,11 +14,13 @@ namespace StretchApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            int screenwidth = Screen.PrimaryScreen.Bounds.Width;
-            int formwidth = this.Width;
-
-            this.Location = new Point(screenwidth - formwidth, 0);
-
+            var primaryScreen = Screen.PrimaryScreen;
+            if (primaryScreen != null)
+            {
+                int screenwidth = primaryScreen.Bounds.Width;
+                int formwidth = this.Width;
+                this.Location = new Point(screenwidth - formwidth, 0);
+            }
             ShowHomePage();
         }
 
@@ -33,17 +34,12 @@ namespace StretchApp
 
         private void ShowHomePage()
         {
-            LoadPage(new HomeUserCtrl());
+            LoadPage(new PomodoroControl());
         }
 
         private void Home_Click(object sender, EventArgs e)
         {
             ShowHomePage();
-        }
-
-        private void TimerPageButton_Click(object sender, EventArgs e)
-        {
-            LoadPage(new StretchApp.src.views.Timer());
         }
 
         private void TaskPageButton_Click(object sender, EventArgs e)
